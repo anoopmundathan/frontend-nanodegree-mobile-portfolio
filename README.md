@@ -1,24 +1,24 @@
 ## Website Performance Optimization portfolio project - Solution
 
-### Part 1 Solution: Optimize PageSpeed Insights score for index.html
+## Part 1 Solution: Optimize PageSpeed Insights score for index.html
 Following optimisation methods are applied to reduce CRP. Build tool [gulp](http://gulpjs.com/) is used for this purpose.
 
-* Minimize Number of Bytes
-	** Minify index.html  using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin) plugin.
-	** Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) plugin.
+### Minimize Number of Bytes
+	* Minify index.html  using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin) plugin.
+	* Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) plugin.
 
-* Minimize the use of rendering block resources (CSS)
-	** Minify and Inline CSS using [critical](https://github.com/addyosmani/critical) plugin.
-	** Media Queries on <link> tag to unblock rendering in print.css
+### Minimize the use of rendering block resources (CSS)
+	* Minify and Inline CSS using [critical](https://github.com/addyosmani/critical) plugin.
+	* Media Queries on <link> tag to unblock rendering in print.css
 
-* Minimize use of parser blocking JS
-	** Defer java script execustion using async attribute.
-	** Google webfont is loaded asynchronously using JS.
+### Minimize use of parser blocking JS
+	* Defer java script execustion using async attribute.
+	* Google webfont is loaded asynchronously using JS.
 
-### Part 2 Solution: Optimize Frames per Second in pizza.html- Improve site scrolling perfo
+## Part 2 Solution: Optimize Frames per Second in pizza.html- Improve site scrolling perfo
 
 ###Change Pizza Size 
-To increate Response time, I have declared new variable newWidth in function changePizzaSizes and hard coded width of small, medium and large Pizzas. So when the slider changes I am assaigning newWidth to all random Pizzas according to the newWidth. Removed unnessary fuction determineDx.
+To increase Response time, I have declared new variable newWidth in function changePizzaSizes and hard coded width of small, medium and large Pizzas. So when the slider changes I am assaigning newWidth to all random Pizzas according to the newWidth. Removed unnessary fuction determineDx.
 
 ###Scrolling Pizzas##
 

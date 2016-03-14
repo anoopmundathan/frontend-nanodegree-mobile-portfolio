@@ -4,11 +4,11 @@
 Following optimisation methods are applied to reduce CRP. Build tool [gulp](http://gulpjs.com/) is used for this purpose.
 
 ### Minimize Number of Bytes
-	#### 1.Minify index.html  using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin) plugin.
-	#### 2.Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) plugin.
+	#### 1.Minify index.html  using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin/) plugin.
+	#### 2.Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify/) plugin.
 
 ### Minimize the use of rendering block resources (CSS)
-	#### 1.Minify and Inline CSS using [critical](https://github.com/addyosmani/critical) plugin.
+	#### 1.Minify and Inline CSS using [critical](https://github.com/addyosmani/critical/) plugin.
 	#### 2. Media Queries on <link> tag to unblock rendering in print.css
 
 ### Minimize use of parser blocking JS

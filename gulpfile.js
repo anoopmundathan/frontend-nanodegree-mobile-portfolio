@@ -59,6 +59,7 @@ gulp.task('imagemin', function(){
 		.pipe(gulp.dest('dist/img'));
 });
 
+//optimise image in views folder
 gulp.task('imagemin1', function(){
 	return gulp.src(['src/views/images/*.*'])
 		.pipe(imageresize({
@@ -72,4 +73,25 @@ gulp.task('imagemin1', function(){
 		.pipe(gulp.dest('dist/views/images'));
 });
 
+//change the dimension of the  profile pic
+gulp.task('imagemin2', function(){
+	return gulp.src(['src/img/profilepic.png'])
+		.pipe(imageresize({
+			width:75,
+			height:75
+		}))
+		.pipe(imagemin({
+			progressive: true,
+			use: [pngquant(),jpegtran()] 
+		}))
+		.pipe(gulp.dest('dist/img'));
+});
+
+//Watch files
+gulp.task('watch', function() {
+	gulp.watch('src/**/*.css',['minifyCSS']);
+	gulp.watch('src/**/*.js', ['uglifyJS']);
+});
+
+//default gulp task
 gulp.task('default',['critical']);

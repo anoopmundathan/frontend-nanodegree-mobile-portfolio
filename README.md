@@ -1,3 +1,39 @@
+## Website Performance Optimization portfolio project - Solution
+
+### Part 1 Solution: Optimize PageSpeed Insights score for index.html
+Following optimisation methods are applied to reduce CRP. Build tool [gulp](http://gulpjs.com/) is used for this purpose.
+
+* Minimize Number of Bytes
+	** Minify index.html  using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin) plugin.
+	** Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify) plugin.
+
+* Minimize the use of rendering block resources (CSS)
+	** Minify and Inline CSS using [critical](https://github.com/addyosmani/critical) plugin.
+	** Media Queries on <link> tag to unblock rendering in print.css
+
+* Minimize use of parser blocking JS
+	** Defer java script execustion using async attribute.
+	** Google webfont is loaded asynchronously using JS.
+
+### Part 2 Solution: Optimize Frames per Second in pizza.html- Improve site scrolling perfo
+
+###Change Pizza Size 
+To increate Response time, I have declared new variable newWidth in function changePizzaSizes and hard coded width of small, medium and large Pizzas. So when the slider changes I am assaigning newWidth to all random Pizzas according to the newWidth. Removed unnessary fuction determineDx.
+
+###Scrolling Pizzas##
+
+Orignally 200 pizzas were being created no matter how many were to be displayed on screen. So changed to create only 24 pizzas in DOMContentLoaded.
+
+* To achieve 60FPS while scrolling, I have done following optimisation in updatePositions function
+
+* All mover pizza selected using getElementsByClassName rather than querySelectorAll.
+
+* Calculated and cache length variable outside of the for loop.
+
+* In Original code there was Force synchronised Layout happening as scollTop causes Layout to run inside the loop and that gets invalidated in style.left property assiagnment, also scollTop always same and there is no reason that calculation should exists inside the loop. So I decided to move the srollTop calculation outside the for loop and uses ScrollTop value from previous frame, which gave me good performance improvement in Javascript part of the frame.
+
+* Since I reduced number of pizza to 24, browser has to apply recalculated style only for those 24 pizzas rather than 200 pizzas. That imp
+
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).

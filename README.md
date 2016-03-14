@@ -39,6 +39,11 @@ Orignally 200 pizzas were being created no matter how many were to be displayed 
 
 5. Since I reduced number of pizza to 24, browser has to apply recalculated style only for those 24 pizzas rather than 200 pizzas. That imp
 
+## Part 3 How to run the application:
+
+Clone the repo and run index.html from dist folder (minified sources) or src folder (unminified code)
+
+---
 ## Website Performance Optimization portfolio project
 
 Your challenge, if you wish to accept it (and we sure hope you will), is to optimize this online portfolio for speed! In particular, optimize the critical rendering path and make this page render as quickly as possible by applying the techniques you've picked up in the [Critical Rendering Path course](https://www.udacity.com/course/ud884).

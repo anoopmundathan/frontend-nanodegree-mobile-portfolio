@@ -8,6 +8,8 @@ Following optimisation methods are applied to reduce CRP. Build tool [gulp](http
 
 2.Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify/) plugin.
 
+3.Optimised images using [imagemin](https://www.npmjs.com/package/imagemin) plugin.
+
 ### Minimize the use of rendering block resources (CSS)
 1.Minify and Inline CSS using [critical](https://github.com/addyosmani/critical/) plugin.
 

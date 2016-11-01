@@ -1,21 +1,24 @@
+# frontend-nanodegree-mobile-portfolio
+Udacity FrontEnd Nanodegree Project
+
 ## Website Performance Optimization portfolio project - Solution
 
 ## Part 1 Solution: Optimize PageSpeed Insights score for index.html
 Following optimisation methods are applied to reduce CRP. Build tool [gulp](http://gulpjs.com/) is used for this purpose.
 
-### Minimize Number of Bytes
+#### Minimize Number of Bytes
 1.Minify index.html using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin/) plugin.
 
 2.Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify/) plugin.
 
 3.Optimised images using [imagemin](https://www.npmjs.com/package/imagemin) plugin.
 
-### Minimize the use of rendering block resources (CSS)
+#### Minimize the use of rendering block resources (CSS)
 1.Minify and Inline CSS using [critical](https://github.com/addyosmani/critical/) plugin.
 
 2.Media Queries on [link] tag to unblock rendering in print.css
 
-### Minimize use of parser blocking JS
+#### Minimize use of parser blocking JS
 1.Defer java script execustion using async attribute.
 
 2.Google webfont is loaded asynchronously using JS.

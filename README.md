@@ -3,27 +3,27 @@ Udacity FrontEnd Nanodegree Project
 
 ## Website Performance Optimization portfolio project - Solution
 
-## Part 1 Solution: Optimize PageSpeed Insights score for index.html
+### Part 1 Solution: Optimize PageSpeed Insights score for index.html
 Following optimisation methods are applied to reduce CRP. Build tool [gulp](http://gulpjs.com/) is used for this purpose.
 
 #### Minimize Number of Bytes
-1.Minify index.html using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin/) plugin.
+* Minify index.html using [gulp-htmlmin](https://www.npmjs.com/package/gulp-htmlmin/) plugin.
 
-2.Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify/) plugin.
+* Uglify JS using [gulp-uglify](https://www.npmjs.com/package/gulp-uglify/) plugin.
 
-3.Optimised images using [imagemin](https://www.npmjs.com/package/imagemin) plugin.
+* Optimised images using [imagemin](https://www.npmjs.com/package/imagemin) plugin.
 
 #### Minimize the use of rendering block resources (CSS)
-1.Minify and Inline CSS using [critical](https://github.com/addyosmani/critical/) plugin.
+* Minify and Inline CSS using [critical](https://github.com/addyosmani/critical/) plugin.
 
-2.Media Queries on [link] tag to unblock rendering in print.css
+* Media Queries on [link] tag to unblock rendering in print.css
 
 #### Minimize use of parser blocking JS
-1.Defer java script execustion using async attribute.
+* Defer java script execustion using async attribute.
 
-2.Google webfont is loaded asynchronously using JS.
+* Google webfont is loaded asynchronously using JS.
 
-## Part 2 Solution: Optimize Frames per Second in pizza.html- Improve site scrolling perfo
+### Part 2 Solution: Optimize Frames per Second in pizza.html- Improve site scrolling perfo
 
 ###Change Pizza Size 
 To increase Response time, I have declared new variable newWidth in function changePizzaSizes and hard coded width of small, medium and large Pizzas. So when the slider changes I am assaigning newWidth to all random Pizzas according to the newWidth. Removed unnessary fuction determineDx.
@@ -45,7 +45,10 @@ Orignally 200 pizzas were being created no matter how many were to be displayed 
 ## Part 3 How to run the application:
 1. Check out the repository
   ```bash
-  $> cd /path/to/your-project-folder
+  $> git clone https://github.com/anoopmundathan/frontend-nanodegree-mobile-portfolio.git
+  $> cd frontend-nanodegree-mobile-portfolio
+  $> npm install
+  $> gulp
   $> python -m SimpleHTTPServer 8080
   ```
 
@@ -53,7 +56,7 @@ Orignally 200 pizzas were being created no matter how many were to be displayed 
 1. Download and install [ngrok](https://ngrok.com/) to make your local server accessible remotely.
 
   ``` bash
-  $> cd /path/to/your-project-folder
+  $> cd frontend-nanodegree-mobile-portfolio
   $> ngrok http 8080
   ```
 ---

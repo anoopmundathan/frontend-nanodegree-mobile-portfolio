@@ -42,7 +42,7 @@ Orignally 200 pizzas were being created no matter how many were to be displayed 
 
 5. Since I reduced number of pizza to 24, browser has to apply recalculated style only for those 24 pizzas rather than 200 pizzas. That imp
 
-## Part 3 How to run the application:
+### Part 3 How to run the application:
 1. Check out the repository
   ```bash
   $> git clone https://github.com/anoopmundathan/frontend-nanodegree-mobile-portfolio.git
